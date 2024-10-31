@@ -103,7 +103,10 @@ const Register = () => {
                     </View>
                     <View className="mt-5">
                         <View className="">
-                            <Btn title={"Register"} />
+                            <Btn
+                                title={"Register"}
+                                handler={() => router.push("(root)/home")}
+                            />
                         </View>
                         <View className="mt-5 text-[#999] font-poppins flex-row items-center justify-center">
                             <Text>Already Have Account?</Text>

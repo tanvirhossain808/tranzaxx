@@ -21,6 +21,12 @@ import email from "../assets/images/form/email.png"
 import phone from "../assets/images/form/phone.png"
 import country from "../assets/images/form/country.png"
 import men from "../assets/images/form/men.png"
+import insta from "../assets/images/follow/insta.png"
+import fb from "../assets/images/follow/fb.png"
+import linkind from "../assets/images/follow/linkind.png"
+import x from "../assets/images/follow/x.png"
+import message from "../assets/images/follow/email.png"
+
 export const productsCategories = [
     {
         name: "Real State",
@@ -153,5 +159,70 @@ export const registerInputData = [
         name: "PASSWORD CONFIRMATION",
         placeholder: "AT  LEAST 6 CHARACTERS",
         thirdIcon: eyeIcon,
+    },
+]
+
+export const screens = [
+    {
+        page: "HOME",
+        link: "(root)/home",
+    },
+    {
+        page: "View ads",
+        link: "(root)/home",
+    },
+    {
+        page: "Pricing",
+        link: "(root)/home",
+    },
+    {
+        page: "Faq",
+        link: "(root)/home",
+    },
+    {
+        page: "Contact us",
+        link: "(root)/home",
+    },
+    {
+        page: "ADVERTISE",
+        link: "(root)/home",
+    },
+]
+
+export const aboutUsData = [
+    {
+        page: "Anti-Scam",
+    },
+    {
+        page: "Terms",
+    },
+    {
+        page: "Privacy",
+    },
+]
+export const contact = [
+    {
+        page: "Categories",
+    },
+    {
+        page: "Countries",
+    },
+]
+
+export const follow = [
+    {
+        img: insta,
+    },
+    {
+        img: fb,
+    },
+    {
+        img: linkind,
+    },
+    {
+        img: x,
+    },
+    {
+        img: message,
     },
 ]

@@ -96,7 +96,10 @@ export default function Login() {
                     </View>
                 </View>
                 <View className="mt-5">
-                    <Btn title={"Login"} />
+                    <Btn
+                        title={"Login"}
+                        handler={() => router.replace("(root)/home")}
+                    />
                 </View>
                 <View className="mt-5 text-[#999] font-poppins flex-row items-center justify-center">
                     <Text>DO NOT HAVE AN ACCOUNT?</Text>

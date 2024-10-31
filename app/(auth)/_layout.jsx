@@ -9,6 +9,7 @@ export default function Layout() {
             <Stack.Screen name="login" options={{ headerShown: false }} />
             <Stack.Screen name="register" options={{ headerShown: false }} />
             <Stack.Screen name="onboard" options={{ headerShown: false }} />
+            <Stack.Screen name="humber" options={{ headerShown: false }} />
             {/* <Stack.Screen name="+not-found" /> */}
         </Stack>
     )

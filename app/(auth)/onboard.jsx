@@ -1,5 +1,5 @@
 import { AntDesign } from "@expo/vector-icons"
-import { Link } from "expo-router"
+import { Link, router } from "expo-router"
 import { Image, ScrollView, TouchableOpacity } from "react-native"
 import { View, Text } from "react-native"
 
@@ -35,7 +35,10 @@ const onboard = () => {
                 </Text>
                 <View>
                     <View className="flex-row justify-end mt-10 mb-8">
-                        <TouchableOpacity className="flex-row items-center bg-[#00ADEF] py-[3px] px-[30px] rounded-lg">
+                        <TouchableOpacity
+                            className="flex-row items-center bg-[#00ADEF] py-[3px] px-[30px] rounded-lg"
+                            onPress={() => router.replace("/login")}
+                        >
                             <Text className="text-[20px] font-poppins text-white font-bold text-capitalize">
                                 Next
                             </Text>

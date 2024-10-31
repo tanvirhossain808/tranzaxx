@@ -4,17 +4,16 @@ import {
     ThemeProvider,
 } from "@react-navigation/native"
 import { useFonts } from "expo-font"
-import { Stack } from "expo-router"
+import { Stack, usePathname } from "expo-router"
 import * as SplashScreen from "expo-splash-screen"
 import { useEffect } from "react"
 import "react-native-reanimated"
 import "../global.css"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { StatusBar } from "expo-status-bar"
-import { Text, View } from "react-native"
+import { View } from "react-native"
 import Navbar from "../components/Header/Navbar"
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
@@ -27,6 +26,8 @@ export default function RootLayout() {
         BebasNeue: require("../assets/fonts/Bebas/BebasNeue-Regular.ttf"),
     })
 
+    const pathname = usePathname()
+
     useEffect(() => {
         if (loaded) {
             SplashScreen.hideAsync()
@@ -38,14 +39,14 @@ export default function RootLayout() {
     }
 
     return (
-        // <ThemeProvider
-        //     value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
-        // >
         <View className="flex-1">
             <SafeAreaView className="flex-1">
                 <StatusBar style="light" backgroundColor="#010101" />
-                <Navbar />
-                <View></View>
+
+                {pathname !== "/welcome" && pathname !== "/onboard" && (
+                    <Navbar />
+                )}
+
                 <Stack>
                     <Stack.Screen
                         name="index"
@@ -63,6 +64,5 @@ export default function RootLayout() {
                 </Stack>
             </SafeAreaView>
         </View>
-        // </ThemeProvider>
     )
 }

@@ -23,12 +23,18 @@ const welcome = () => {
                     </Text>
                 </View>
                 <View>
-                    <TouchableOpacity className="bg-[#00ADEF] py-4 rounded-[12px]">
+                    <TouchableOpacity
+                        className="bg-[#00ADEF] py-4 rounded-[12px]"
+                        onPress={() => router.push("/login")}
+                    >
                         <Text className="font-poppins text-[18px] text-white font-semibold text-center">
                             Login
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity className="py-4 rounded-[12px] mt-6">
+                    <TouchableOpacity
+                        className="py-4 rounded-[12px] mt-6"
+                        onPress={() => router.push("/register")}
+                    >
                         <Text className="font-poppins text-[18px] text-primary font-semibold text-center">
                             Sign up
                         </Text>
