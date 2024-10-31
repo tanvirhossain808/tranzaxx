@@ -1,11 +1,11 @@
 import { View, Text, ScrollView } from "react-native"
 import React from "react"
-import HeroSection from "@/components/Home/HeroSection"
-import Search from "@/components/Home/Search"
-import Categories from "@/components/Home/Categories"
-import FeaturedAds from "@/components/Home/FeaturedAds"
-import SellersDetails from "@/components/Home/SellersDetails"
-import RegisterNow from "@/components/Home/RegisterNow"
+import HeroSection from "../components/Home/HeroSection"
+import Categories from "../components/Home/Categories"
+import FeaturedAds from "../components/Home/FeaturedAds"
+import SellersDetails from "../components/Home/SellersDetails"
+import RegisterNow from "../components/Home/RegisterNow"
+import Search from "../components/Home/Search"
 
 export default function index() {
     return (

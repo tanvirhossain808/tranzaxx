@@ -1,17 +1,17 @@
 {
+    "compilerOptions": {},
     "extends": "expo/tsconfig.base",
-    "compilerOptions": {
-        "strict": true,
-        "paths": {
-            "@/*": ["./*"]
-        }
-    },
     "include": [
         "**/*.ts",
         "**/*.tsx",
         ".expo/types/**/*.ts",
         "expo-env.d.ts",
-        "nativewind-env.d.ts",
-        " images.d.ts"
+        "components/Home/HeroSection.js",
+        "components/Home/SellersDetails.tsx",
+        "components/Home/Search.jsx",
+        "components/Home/RegisterNow.jsx",
+        "components/Home/Categories.jsx",
+        "components/Home/FeaturedAds.jsx",
+        "components/Header/Navbar.jsx"
     ]
 }

@@ -1,5 +1,5 @@
-import { homeFotterData } from "@/constant/data"
 import { View, Text, Image } from "react-native"
+import { homeFotterData } from "../../constant/data"
 
 export default function SellersDetails() {
     return (

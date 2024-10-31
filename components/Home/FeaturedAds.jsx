@@ -1,6 +1,6 @@
-import { featuresAdsData } from "@/constant/data"
 import { AntDesign, Entypo } from "@expo/vector-icons"
 import { View, Text, Image, TouchableOpacity } from "react-native"
+import { featuresAdsData } from "../../constant/data"
 
 const FeaturedAds = () => {
     return (
