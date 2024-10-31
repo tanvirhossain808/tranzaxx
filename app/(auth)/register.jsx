@@ -52,7 +52,7 @@ const Register = () => {
                     </View>
                 </View>
                 <View className="px-4">
-                    <View className="mt-[38px] flex-row items-center">
+                    <View className="mt-4 flex-row items-center">
                         <TouchableOpacity
                             onPress={() => setAgree(!agree)}
                             className="w-7 h-7 border-[1px] border-[#BFBFBF] mr-2 items-center justify-center"
@@ -71,7 +71,7 @@ const Register = () => {
                     </View>
                 </View>
                 <View className="px-4">
-                    <View className="mt-[38px] flex-row items-center">
+                    <View className="mt-3 flex-row items-center">
                         <TouchableOpacity
                             onPress={() => setHidePhoneNumber(!hidePhoneNumber)}
                             className="w-7 h-7 border-[1px] border-[#BFBFBF] mr-2 items-center justify-center"
@@ -86,7 +86,7 @@ const Register = () => {
                     </View>
                 </View>
                 <View className="px-4">
-                    <View className="mt-[38px] flex-row items-center">
+                    <View className="mt-3 flex-row items-center">
                         <TouchableOpacity
                             onPress={() =>
                                 setReceiveMarketingEmail(!receiveMarketingEmail)
@@ -101,34 +101,23 @@ const Register = () => {
                             </Text>
                         </View>
                     </View>
+                    <View className="mt-5">
+                        <View className="">
+                            <Btn title={"Register"} />
+                        </View>
+                        <View className="mt-5 text-[#999] font-poppins flex-row items-center justify-center">
+                            <Text>Already Have Account?</Text>
+                            <TouchableOpacity
+                                className=""
+                                onPress={() => router.replace("/login")}
+                            >
+                                <Text className="text-[#010101] font-semibold text-[14px]">
+                                    Login
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                 </View>
-                <TouchableOpacity
-                    className="mt-4"
-                    onPress={() => setIsLogin(false)}
-                >
-                    <Text className="text-[14px] font-medium text-right text-[#999999]">
-                        LOST YOUR PASSWORD?
-                    </Text>
-                </TouchableOpacity>
-                <View className="mt-[38px] flex-row items-center justify-center">
-                    <Text className="text-[#010101] font-poppins">
-                        KEEP ME LOGGED IN
-                    </Text>
-                </View>
-            </View>
-            <View className="mt-5">
-                <Btn title={"Login"} />
-            </View>
-            <View className="mt-5 text-[#999] font-poppins flex-row items-center justify-center">
-                <Text>Already Have Account?</Text>
-                <TouchableOpacity
-                    className=""
-                    onPress={() => router.replace("/login")}
-                >
-                    <Text className="text-[#010101] font-semibold text-[14px]">
-                        Register
-                    </Text>
-                </TouchableOpacity>
             </View>
         </ScrollView>
     )
