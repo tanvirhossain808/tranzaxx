@@ -1,4 +1,5 @@
 import { AntDesign } from "@expo/vector-icons"
+import { router } from "expo-router"
 import { TouchableOpacity } from "react-native"
 import { View, Text, Image } from "react-native"
 
@@ -34,7 +35,10 @@ const welcome = () => {
                     </TouchableOpacity>
                 </View>
             </View>
-            <TouchableOpacity className="py-4 rounded-[12px] flex-row items-center gap-2 justify-center mt-6">
+            <TouchableOpacity
+                className="py-4 rounded-[12px] flex-row items-center gap-2 justify-center mt-6"
+                onPress={() => router.replace("onboard")}
+            >
                 <Text className="font-poppins text-[18px] text-[#333] font-medium text-center">
                     Skip for now
                 </Text>
