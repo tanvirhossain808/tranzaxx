@@ -16,6 +16,7 @@ module.exports = {
             },
             boxShadow: {
                 custom: "0px 0px 40px 0px rgba(0, 0, 0, 0.05)",
+                loginShadow: "0 0 30px rgba(0, 0, 0, 0.10)",
             },
         },
     },
