@@ -6,17 +6,21 @@ import {
 import { useFonts } from "expo-font"
 import { Stack, usePathname } from "expo-router"
 import * as SplashScreen from "expo-splash-screen"
-import { useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
 import "react-native-reanimated"
 import "../global.css"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { StatusBar } from "expo-status-bar"
 import { View } from "react-native"
 import Navbar from "../components/Header/Navbar"
+import { AppContext, AppProvider } from "../store/store"
+import Menu from "./(auth)/humber"
 
 SplashScreen.preventAutoHideAsync()
 
 export default function RootLayout() {
+    const [isShowMenu, setIsShowMenu] = useState(false)
+
     const [loaded] = useFonts({
         SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
         "Poppins-Regular": require("../assets/fonts/poppins/Poppins-Regular.ttf"),
@@ -37,32 +41,42 @@ export default function RootLayout() {
     if (!loaded) {
         return null
     }
-
     return (
-        <View className="flex-1">
-            <SafeAreaView className="flex-1">
-                <StatusBar style="light" backgroundColor="#010101" />
+        <AppProvider>
+            <View className="flex-1">
+                <SafeAreaView className="flex-1">
+                    <StatusBar style="light" backgroundColor="#010101" />
 
-                {pathname !== "/welcome" && pathname !== "/onboard" && (
-                    <Navbar />
-                )}
+                    {pathname !== "/welcome" && pathname !== "/onboard" && (
+                        <View>
+                            <Navbar setIsShowMenu={setIsShowMenu} />
+                            <View
+                                className={`${
+                                    !isShowMenu ? "ml-[800px]" : "ml-0"
+                                } `}
+                            >
+                                <Menu />
+                            </View>
+                        </View>
+                    )}
 
-                <Stack>
-                    <Stack.Screen
-                        name="index"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="(root)"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="(auth)"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen name="+not-found" />
-                </Stack>
-            </SafeAreaView>
-        </View>
+                    <Stack>
+                        <Stack.Screen
+                            name="index"
+                            options={{ headerShown: false }}
+                        />
+                        <Stack.Screen
+                            name="(root)"
+                            options={{ headerShown: false }}
+                        />
+                        <Stack.Screen
+                            name="(auth)"
+                            options={{ headerShown: false }}
+                        />
+                        <Stack.Screen name="+not-found" />
+                    </Stack>
+                </SafeAreaView>
+            </View>
+        </AppProvider>
     )
 }
