@@ -50,13 +50,7 @@ export default function RootLayout() {
                     {pathname !== "/welcome" && pathname !== "/onboard" && (
                         <View>
                             <Navbar setIsShowMenu={setIsShowMenu} />
-                            <View
-                                className={`${
-                                    !isShowMenu ? "ml-[800px]" : "ml-0"
-                                } `}
-                            >
-                                <Menu />
-                            </View>
+                            <View>{isShowMenu && <Menu />}</View>
                         </View>
                     )}
 
