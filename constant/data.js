@@ -15,7 +15,12 @@ import house from "../assets/images/home/FeatureAds/house.png"
 import mike from "../assets/images/home/footer/mike.png"
 import seller from "../assets/images/home/footer/seller.png"
 import location from "../assets/images/home/footer/location.png"
-
+import eyeIcon from "../assets/images/form/eye.png"
+import lock from "../assets/images/form/lock.png"
+import email from "../assets/images/form/email.png"
+import phone from "../assets/images/form/phone.png"
+import country from "../assets/images/form/country.png"
+import men from "../assets/images/form/men.png"
 export const productsCategories = [
     {
         name: "Real State",
@@ -116,5 +121,37 @@ export const homeFotterData = [
         name: "Locations",
         img: location,
         count: 71,
+    },
+]
+export const registerInputData = [
+    {
+        firstIcon: men,
+        thirdIcon: "",
+        name: "Name",
+        placeholder: "name",
+    },
+    {
+        firstIcon: phone,
+        thirdIcon: country,
+        name: "Phone",
+        placeholder: "PHONE NUMBER",
+    },
+    {
+        firstIcon: email,
+        email: "Email",
+        placeholder: "Email",
+        thirdIcon: "",
+    },
+    {
+        firstIcon: lock,
+        name: "Password",
+        placeholder: "AT  LEAST 6 CHARACTERS",
+        thirdIcon: eyeIcon,
+    },
+    {
+        firstIcon: lock,
+        name: "PASSWORD CONFIRMATION",
+        placeholder: "AT  LEAST 6 CHARACTERS",
+        thirdIcon: eyeIcon,
     },
 ]

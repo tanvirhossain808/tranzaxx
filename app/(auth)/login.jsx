@@ -4,6 +4,8 @@ import { Image } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
 import { TouchableOpacity } from "react-native"
 import Btn from "../../components/shared/Btn"
+import ForgetPassword from "../../components/ForgetPassword"
+import { router } from "expo-router"
 
 export default function Login() {
     const [isLogin, setIsLogin] = useState(true)
@@ -16,6 +18,7 @@ export default function Login() {
     const toggleCheckbox = () => {
         setIsChecked(!isChecked)
     }
+    if (!isLogin) return <ForgetPassword setIsLogin={setIsLogin} />
     return (
         <ScrollView className="px-4">
             <View className="shadow-loginShadow rounded-[12px]  bg-white pb-6 mt-[50px]">
@@ -70,7 +73,10 @@ export default function Login() {
                             </View>
                         </View>
                     </View>
-                    <TouchableOpacity className="mt-4">
+                    <TouchableOpacity
+                        className="mt-4"
+                        onPress={() => setIsLogin(false)}
+                    >
                         <Text className="text-[14px] font-medium text-right text-[#999999]">
                             LOST YOUR PASSWORD?
                         </Text>
@@ -89,10 +95,15 @@ export default function Login() {
                         </Text>
                     </View>
                 </View>
-                <View className="mt-5">{/* <Btn title={Login} /> */}</View>
+                <View className="mt-5">
+                    <Btn title={"Login"} />
+                </View>
                 <View className="mt-5 text-[#999] font-poppins flex-row items-center justify-center">
                     <Text>DO NOT HAVE AN ACCOUNT?</Text>
-                    <TouchableOpacity className="">
+                    <TouchableOpacity
+                        className=""
+                        onPress={() => router.replace("/register")}
+                    >
                         <Text className="text-[#010101] font-semibold text-[14px]">
                             SIGN UP
                         </Text>
