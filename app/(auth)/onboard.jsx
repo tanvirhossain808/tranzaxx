@@ -6,7 +6,7 @@ import { View, Text } from "react-native"
 const onboard = () => {
     return (
         <ScrollView className="flex-1">
-            <View className="flex-row justify-end mt-7 pr-5">
+            <View className="flex-row justify-end mt-1 pr-5">
                 <Link
                     href={"login"}
                     className="text-[#21212] text-[20px] font-medium font-uppercase"

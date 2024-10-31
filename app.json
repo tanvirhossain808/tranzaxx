@@ -1,11 +1,11 @@
 {
     "expo": {
-        "name": "shopping",
-        "slug": "shopping",
+        "name": "TRANZAXX",
+        "slug": "TRANZAXX",
         "version": "1.0.0",
         // "orientation": "portrait",
         "orientation": "default",
-        "icon": "./assets/images/icon.png",
+        "icon": "./assets/images/playstore.png",
         "scheme": "myapp",
         "userInterfaceStyle": "automatic",
         "splash": {
