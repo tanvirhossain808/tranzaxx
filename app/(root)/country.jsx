@@ -5,7 +5,9 @@ import { countriesDetails } from "../../constant/data"
 const Country = () => {
     return (
         <ScrollView className="px-4">
-            <PopupMessage />
+            <View className="mt-4">
+                <PopupMessage />
+            </View>
             <Text className="text-primaryBlk font-poppins text-[24px] font-semibold mt-[33px]">
                 Countries
             </Text>
@@ -17,7 +19,6 @@ const Country = () => {
                     >
                         <Image source={country.img} />
                         <Text>{country.name}</Text>
-                        {/* Add other details if needed */}
                     </View>
                 ))}
             </View>

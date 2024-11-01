@@ -187,23 +187,23 @@ export const screens = [
     },
     {
         page: "View ads",
-        link: "(root)/home",
+        link: "(root)/ads",
     },
     {
         page: "Pricing",
-        link: "(root)/home",
+        link: "(root)/pricing",
     },
     {
         page: "Faq",
-        link: "(root)/home",
+        link: "(root)/faq",
     },
     {
         page: "Contact us",
-        link: "(root)/home",
+        link: "(root)/contact",
     },
     {
         page: "ADVERTISE",
-        link: "(root)/home",
+        link: "(root)/advertise",
     },
 ]
 

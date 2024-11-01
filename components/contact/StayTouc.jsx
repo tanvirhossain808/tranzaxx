@@ -10,7 +10,7 @@ export default function StayTouch() {
             <Text className="font-bold font-poppins leading-[36px] text-[30px] text-white uppercase">
                 WITH US ANYTIME
             </Text>
-            <View>
+            <View className="mt-10">
                 {stayTouch.map((data) => (
                     <View
                         key={data.name}
