@@ -1,12 +1,14 @@
-import { View, Text, ImageBackground } from "react-native"
+import { View, Text, ImageBackground, ScrollView } from "react-native"
 import BoostBrand from "../../components/shared/BoostBrand"
 import RotateText from "../../components/shared/RotateText"
 import Btn from "../../components/shared/Btn"
 import BtnWithArrow from "../../components/shared/BtnWithArrow"
+import ContactForm from "../../components/contact/ContactForm"
+import StayTouch from "../../components/contact/StayTouc"
 
 export default function Contact() {
     return (
-        <View>
+        <ScrollView>
             <View className="mt-[60px]">
                 <View className="mb-[30px] flex-row items-center justify-center">
                     <BoostBrand />
@@ -35,6 +37,12 @@ export default function Contact() {
                     <BtnWithArrow title={"Contact us now"} handler={() => {}} />
                 </View>
             </View>
-        </View>
+            <View className="px-6 mt-[50px]">
+                <ContactForm />
+            </View>
+            <View className="px-4 mt-6">
+                <StayTouch />
+            </View>
+        </ScrollView>
     )
 }

@@ -26,7 +26,9 @@ import fb from "../assets/images/follow/fb.png"
 import linkind from "../assets/images/follow/linkind.png"
 import x from "../assets/images/follow/x.png"
 import message from "../assets/images/follow/email.png"
-
+import stayMessage from "../assets/images/contact/message.png"
+import stayPhone from "../assets/images/contact/phone.png"
+import stayLocation from "../assets/images/contact/location.png"
 export const productsCategories = [
     {
         name: "Real State",
@@ -340,5 +342,56 @@ classified ads to sell?`,
 INQUIRIES YOU HAVE. WHETHER IT'S ABOUT OUR
 SERVICES, PRICING, OR SUPPORT, FEEL FREE TO REACH
 OUT. OUR TEAM IS ALWAYS READY TO HELP YOU.`,
+    },
+]
+export const contactUsForm = [
+    {
+        name: "First Name",
+        placeholder: "Fist Name",
+    },
+    {
+        name: "Last Name",
+        placeholder: "First Name",
+    },
+    {
+        name: "Company Name",
+        placeholder: "Company Name",
+    },
+    {
+        name: "Email Address",
+        placeholder: "Email Address",
+    },
+    {
+        name: "Message",
+        placeholder: "Message",
+    },
+]
+
+export const stayTouch = [
+    {
+        icon: stayMessage,
+        name: "Email Us",
+        title: "INFO@TRANZAXX.COM",
+    },
+    {
+        icon: stayPhone,
+        name: "PHONE NUMBER",
+        title: "+1-000-000-0000",
+    },
+    {
+        icon: stayLocation,
+        name: "901 N PITT STR., SUITE 170",
+        title: "ALEXANDRIA, VA 22314, USA",
+    },
+]
+
+export const ads = [
+    {
+        category: "automobile",
+        name: "cars",
+        icon: "",
+        place: "",
+        price: "",
+        title: "",
     },
 ]
