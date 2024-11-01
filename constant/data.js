@@ -29,6 +29,22 @@ import message from "../assets/images/follow/email.png"
 import stayMessage from "../assets/images/contact/message.png"
 import stayPhone from "../assets/images/contact/phone.png"
 import stayLocation from "../assets/images/contact/location.png"
+import carIcon from "../assets/images/ads/automobile.png"
+import handIcon from "../assets/images/ads/hand.png"
+import shpng from "../assets/images/ads/shoping.png"
+import redCar from "../assets/images/ads/cher.png"
+import belgium from "../assets/images/countries/belgium.png"
+import lexum from "../assets/images/countries/lusemberg.png"
+import canada from "../assets/images/countries/canada.png"
+import us from "../assets/images/countries/us.png"
+import france from "../assets/images/countries/france.png"
+import italy from "../assets/images/countries/italy.png"
+import brazil from "../assets/images/countries/brazil.png"
+import germany from "../assets/images/countries/germany.png"
+import spain from "../assets/images/countries/spain.png"
+import arabia from "../assets/images/countries/arabia.png"
+import uae from "../assets/images/countries/use.png"
+import nether from "../assets/images/countries/netherland.png"
 export const productsCategories = [
     {
         name: "Real State",
@@ -385,13 +401,83 @@ export const stayTouch = [
     },
 ]
 
-export const ads = [
+export const adsCategories = [
     {
         category: "automobile",
-        name: "cars",
-        icon: "",
-        place: "",
-        price: "",
-        title: "",
+        title: "cars",
+        img: car,
+        icon: carIcon,
+        place: "MONTREAL",
+        price: "125,000",
+        name: "VOITURE DE SPORT EXCEPTIONNELLE",
+    },
+    {
+        category: "REAL ESTATE",
+        title: "HOUSES & APARTMENTS FOR RENT",
+        img: shpng,
+        icon: handIcon,
+        place: "MONTREAL",
+        price: "125,000",
+        name: "TESYEUSYE",
+    },
+    {
+        category: "AUTOMOBILES",
+        title: "CARS",
+        img: redCar,
+        icon: handIcon,
+        place: "MONTREAL",
+        price: "85,000 ",
+        name: "CHEVROLET CORVETTE",
+    },
+]
+
+export const countriesDetails = [
+    {
+        img: belgium,
+        name: "Belgium",
+    },
+    {
+        img: lexum,
+        name: "Luxembourg",
+    },
+    {
+        img: canada,
+        name: "Canada",
+    },
+    {
+        img: us,
+        name: "United States",
+    },
+    {
+        img: france,
+        name: "France",
+    },
+    {
+        img: italy,
+        name: "Italy",
+    },
+    {
+        img: brazil,
+        name: "Brazil",
+    },
+    {
+        img: germany,
+        name: "Germany",
+    },
+    {
+        img: spain,
+        name: "Spain",
+    },
+    {
+        img: nether,
+        name: "Netherlands",
+    },
+    {
+        img: arabia,
+        name: "Saudi Arabia",
+    },
+    {
+        img: uae,
+        name: "U.A.E",
     },
 ]
