@@ -226,3 +226,84 @@ export const follow = [
         img: message,
     },
 ]
+
+export const pricingCategories = [
+    {
+        name: "Bronze",
+        price: 29.99,
+        title: "15 seconds video",
+        features: [
+            "1 Custom Thumbnail",
+            "Video up to 15 seconds allowed",
+            "Up to 1000 views for video",
+            "This is our package for beginners",
+            "You can edit or delete your ads anytime",
+        ],
+        recommended: false,
+    },
+    {
+        name: "Silver",
+        price: 84.99,
+        title: "15 seconds video",
+        features: [
+            "1 Custom Thumbnail",
+            "Video up to 15 seconds allowed",
+            "Up to 1000 views for video",
+            "This is our package for beginners",
+            "You can edit or delete your ads anytime",
+        ],
+        recommended: true,
+    },
+    {
+        name: "Gold",
+        price: 29.99,
+        title: "15 seconds video",
+        features: [
+            "1 Custom Thumbnail",
+            "Video up to 15 seconds allowed",
+            "Up to 1000 views for video",
+            "This is our package for beginners",
+            "You can edit or delete your ads anytime",
+        ],
+        recommended: false,
+    },
+    {
+        name: "Titanium",
+        price: 29.99,
+        title: "15 seconds video",
+        features: [
+            "1 Custom Thumbnail",
+            "Video up to 15 seconds allowed",
+            "Up to 1000 views for video",
+            "This is our package for beginners",
+            "You can edit or delete your ads anytime",
+        ],
+        recommended: false,
+    },
+    {
+        name: "Platinium",
+        price: 29.99,
+        title: "15 seconds video",
+        features: [
+            "1 Custom Thumbnail",
+            "Video up to 15 seconds allowed",
+            "Up to 1000 views for video",
+            "This is our package for beginners",
+            "You can edit or delete your ads anytime",
+        ],
+        recommended: false,
+    },
+    {
+        name: "Palladium",
+        price: 29.99,
+        title: "15 seconds video",
+        features: [
+            "1 Custom Thumbnail",
+            "Video up to 15 seconds allowed",
+            "Up to 1000 views for video",
+            "This is our package for beginners",
+            "You can edit or delete your ads anytime",
+        ],
+        recommended: false,
+    },
+]
