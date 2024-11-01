@@ -1,26 +1,7 @@
 import { View, Text, ImageBackground } from "react-native"
-import React from "react"
 import { pricingCategories } from "../../constant/data"
 import { TouchableOpacity } from "react-native"
 import { Image } from "react-native"
-
-/* 
- {
-        name: "Silver",
-        price: 84.99,
-        title: "15 seconds video",
-        features: [
-            "1 Custom Thumbnail",
-            "Video up to 15 seconds allowed",
-            "Up to 1000 views for video",
-            "This is our package for beginners",
-            "You can edit or delete your ads anytime",
-        ],
-        Recommended: true,
-    },
-
-
-*/
 const PricingCard = () => {
     return (
         <View>
