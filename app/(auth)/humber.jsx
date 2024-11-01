@@ -3,8 +3,18 @@ import { aboutUsData, contact, follow, screens } from "../../constant/data"
 import { TouchableOpacity } from "react-native"
 import { Image } from "react-native"
 import { router } from "expo-router"
+import { useContext } from "react"
+import { AppContext } from "../../store/store"
 
-const Menu = () => {
+const Menu = ({ setIsShowMenu }) => {
+    const { setShowMenu } = useContext(AppContext)
+
+    const handleOnPress = (screen) => {
+        router.push(screen.link)
+        setShowMenu(false)
+        setIsShowMenu(false)
+    }
+
     return (
         <ScrollView>
             <View className="bg-[#00AEF0] px-10 py-5">
@@ -12,7 +22,7 @@ const Menu = () => {
                     {screens.map((screen, index) => (
                         <View key={index}>
                             <TouchableOpacity
-                                onPress={() => router.push(screen.link)}
+                                onPress={() => handleOnPress(screen)}
                             >
                                 <Text className="text-white font-poppins text-[16px] font-semibold uppercase">
                                     {screen.page}

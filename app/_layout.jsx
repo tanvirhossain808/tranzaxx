@@ -13,7 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context"
 import { StatusBar } from "expo-status-bar"
 import { View } from "react-native"
 import Navbar from "../components/Header/Navbar"
-import { AppContext, AppProvider } from "../store/store"
+import { AppProvider } from "../store/store"
 import Menu from "./(auth)/humber"
 
 SplashScreen.preventAutoHideAsync()
@@ -50,7 +50,11 @@ export default function RootLayout() {
                     {pathname !== "/welcome" && pathname !== "/onboard" && (
                         <View>
                             <Navbar setIsShowMenu={setIsShowMenu} />
-                            <View>{isShowMenu && <Menu />}</View>
+                            <View>
+                                {isShowMenu && (
+                                    <Menu setIsShowMenu={setIsShowMenu} />
+                                )}
+                            </View>
                         </View>
                     )}
 
