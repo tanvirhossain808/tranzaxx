@@ -307,3 +307,38 @@ export const pricingCategories = [
         recommended: false,
     },
 ]
+
+export const faq = [
+    {
+        question: `Why should I use Tranzaxx over other
+classified ads to sell?`,
+        ans: `WE'RE HERE TO ASSIST YOU WITH ANY QUESTIONS OR
+INQUIRIES YOU HAVE. WHETHER IT'S ABOUT OUR
+SERVICES, PRICING, OR SUPPORT, FEEL FREE TO REACH
+OUT. OUR TEAM IS ALWAYS READY TO HELP YOU.`,
+    },
+    {
+        question: `Why should I use Tranzaxx over other
+classified ads to sell?`,
+        ans: `WE'RE HERE TO ASSIST YOU WITH ANY QUESTIONS OR
+INQUIRIES YOU HAVE. WHETHER IT'S ABOUT OUR
+SERVICES, PRICING, OR SUPPORT, FEEL FREE TO REACH
+OUT. OUR TEAM IS ALWAYS READY TO HELP YOU.`,
+    },
+    {
+        question: `Why should I use Tranzaxx over other
+classified ads to sell?`,
+        ans: `WE'RE HERE TO ASSIST YOU WITH ANY QUESTIONS OR
+INQUIRIES YOU HAVE. WHETHER IT'S ABOUT OUR
+SERVICES, PRICING, OR SUPPORT, FEEL FREE TO REACH
+OUT. OUR TEAM IS ALWAYS READY TO HELP YOU.`,
+    },
+    {
+        question: `Why should I use Tranzaxx over other
+classified ads to sell?`,
+        ans: `WE'RE HERE TO ASSIST YOU WITH ANY QUESTIONS OR
+INQUIRIES YOU HAVE. WHETHER IT'S ABOUT OUR
+SERVICES, PRICING, OR SUPPORT, FEEL FREE TO REACH
+OUT. OUR TEAM IS ALWAYS READY TO HELP YOU.`,
+    },
+]
