@@ -77,12 +77,14 @@ const Menu = ({ setIsShowMenu }) => {
                 </View>
                 <View className="mt-[10px]">
                     <Text className="text-[14px] font-poppins text-white font-bold uppercase">
-                        About us
+                        Contact & Sitemap{" "}
                     </Text>
                     <View className="mt-[10px] flex gap-1">
                         {contact.map((data, index) => (
                             <View key={index}>
-                                <TouchableOpacity>
+                                <TouchableOpacity
+                                    onPress={() => handleOnPress(data)}
+                                >
                                     <Text className="text-white text-[14px]">
                                         {data.page}
                                     </Text>

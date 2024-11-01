@@ -221,9 +221,11 @@ export const aboutUsData = [
 export const contact = [
     {
         page: "Categories",
+        link: "/categories",
     },
     {
         page: "Countries",
+        link: "(root)/country",
     },
 ]
 

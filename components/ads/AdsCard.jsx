@@ -20,7 +20,7 @@ import { View, Text, Image } from "react-native"
 const AdsCard = ({ ads }) => {
     const [isLiked, setIsLiked] = useState(false)
     return (
-        <View className="p-5 shadow-custom-blue">
+        <View className="p-5 border-[1px] bg-white border-transparent shadow-custom-blue">
             <View className="relative">
                 <Image source={ads.img} className="w-full rounded-[4px]" />
                 <TouchableOpacity

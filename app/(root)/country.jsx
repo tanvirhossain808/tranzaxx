@@ -18,7 +18,9 @@ const Country = () => {
                         className="w-[48%] border-[1px] border-[#EAE8E8] p-4 rounded-lg flex-row items-center gap-3"
                     >
                         <Image source={country.img} />
-                        <Text>{country.name}</Text>
+                        <Text className="font-poppins text-[#010101] font-bold uppercase">
+                            {country.name}
+                        </Text>
                     </View>
                 ))}
             </View>
