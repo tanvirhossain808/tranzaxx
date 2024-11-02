@@ -187,8 +187,12 @@ const Register = () => {
                                                     : "default"
                                             }
                                             secureTextEntry={
-                                                data.key === "password" &&
-                                                !passwordVisible
+                                                data.key === "password"
+                                                    ? !passwordVisible
+                                                    : data.key ===
+                                                      "confirmPassword"
+                                                    ? !confirmPasswordVisible
+                                                    : false
                                             }
                                         />
                                         {data.thirdIcon !== "" && (
