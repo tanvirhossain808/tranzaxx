@@ -147,36 +147,46 @@ export const homeFotterData = [
         count: 71,
     },
 ]
+// name: "",
+// email: "",
+// password: "",
+// phone: "",
+// username: "",
 export const registerInputData = [
     {
         firstIcon: men,
         thirdIcon: "",
         name: "Name",
         placeholder: "name",
+        key: "name",
     },
     {
         firstIcon: phone,
         thirdIcon: country,
         name: "Phone",
         placeholder: "PHONE NUMBER",
+        key: "phone",
     },
     {
         firstIcon: email,
-        email: "Email",
+        name: "Email",
         placeholder: "Email",
         thirdIcon: "",
+        key: "email",
     },
     {
         firstIcon: lock,
         name: "Password",
         placeholder: "AT  LEAST 6 CHARACTERS",
         thirdIcon: eyeIcon,
+        key: "password",
     },
     {
         firstIcon: lock,
         name: "PASSWORD CONFIRMATION",
         placeholder: "AT  LEAST 6 CHARACTERS",
         thirdIcon: eyeIcon,
+        key: "confirmPassword",
     },
 ]
 
