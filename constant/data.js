@@ -132,26 +132,25 @@ ft.Bedrooms:...`,
 
 export const homeFotterData = [
     {
+        countName: "countPosts",
         name: "Ads",
         img: mike,
         count: 71,
     },
     {
+        countName: "countUsers",
         name: "Trusted Sellers",
         img: seller,
         count: 71,
     },
     {
+        countName: "countCities",
         name: "Locations",
         img: location,
         count: 71,
     },
 ]
-// name: "",
-// email: "",
-// password: "",
-// phone: "",
-// username: "",
+
 export const registerInputData = [
     {
         firstIcon: men,
