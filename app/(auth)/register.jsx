@@ -62,6 +62,20 @@ const Register = () => {
     }
 
     const handleRegister = async () => {
+        let userIpAddress
+        try {
+            const ipResponse = await axios.get(
+                "https://api.ipify.org?format=json"
+            )
+            userIpAddress = ipResponse.data.ip
+        } catch (error) {
+            console.error("Error fetching IP address:", error)
+            Alert.alert(
+                "Error",
+                "Could not fetch IP address. Proceeding with default."
+            )
+            userIpAddress = "0.0.0.0"
+        }
         const errors = validateForm()
         if (Object.keys(errors).length > 0) {
             Alert.alert("Validation Error", Object.values(errors).join("\n"))
@@ -81,7 +95,7 @@ const Register = () => {
         formDataToSend.append("accept_terms", agree)
         formDataToSend.append("accept_marketing_offers", receiveMarketingEmail)
         formDataToSend.append("password_confirmation", formData.confirmPassword)
-        formDataToSend.append("ip_addr", "192.168.1.1")
+        formDataToSend.append("ip_addr", userIpAddress)
 
         try {
             const response = await axios.post(
