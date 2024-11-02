@@ -16,8 +16,11 @@ const Categories = ({ categories }) => {
                     "
                         onPress={() =>
                             router.push({
-                                pathname: `/ads`, // Dynamic route path
-                                params: { category: category.name }, // Additional data as query parameters
+                                pathname: `/ads`,
+                                params: {
+                                    category: category.name,
+                                    categoryId: category.id,
+                                },
                             })
                         }
                     >

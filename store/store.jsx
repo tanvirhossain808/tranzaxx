@@ -8,6 +8,7 @@ export function AppProvider({ children }) {
     const [categories, setCategories] = useState([])
     const [allCategories, setAllCategories] = useState([])
     const [posts, setPosts] = useState([])
+    const [allPosts, setAllPosts] = useState([])
     const getAllCategories = async () => {
         try {
             const res = await axios.get(
@@ -53,8 +54,25 @@ export function AppProvider({ children }) {
             setError("Could not load posts.")
         }
     }
+    const getAllPostsDetails = async () => {
+        try {
+            const res = await axios.get(
+                `${process.env.EXPO_PUBLIC_BASE_URL}/api/posts?embed=user,category,videos`
+            )
+            if (res.status === 200) {
+                setAllPosts(res.data.result.data)
+            } else {
+                setError(`Error: Received status ${res.status}`)
+            }
+        } catch (err) {
+            console.error("Failed to fetch all posts details:", err)
+            setError("Could not load all posts details.")
+        }
+    }
+    // console.log(allPosts, "all")
     useEffect(() => {
         const getAllData = async () => {
+            await getAllPostsDetails()
             await getCategories()
             await getPosts()
             await getAllCategories()
@@ -64,7 +82,14 @@ export function AppProvider({ children }) {
 
     return (
         <AppContext.Provider
-            value={{ showMenu, setShowMenu, categories, posts, allCategories }}
+            value={{
+                showMenu,
+                setShowMenu,
+                categories,
+                posts,
+                allCategories,
+                allPosts,
+            }}
         >
             {children}
         </AppContext.Provider>
