@@ -2,6 +2,7 @@ import { View, Text, Image, TouchableOpacity } from "react-native"
 import { productsCategories } from "../../constant/data"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { router } from "expo-router"
 
 const Categories = ({ categories }) => {
     return (
@@ -12,8 +13,13 @@ const Categories = ({ categories }) => {
                         key={category?.name}
                         className="flex items-center justify-center gap-12 border-[1px] border-[#EBEBEB] shadow-custom
                     px-6 py-[42px]
-
                     "
+                        onPress={() =>
+                            router.push({
+                                pathname: `/ads`, // Dynamic route path
+                                params: { category: category.name }, // Additional data as query parameters
+                            })
+                        }
                     >
                         <Image
                             source={{
